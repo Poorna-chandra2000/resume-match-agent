@@ -88,7 +88,7 @@ def build_rag(resume_folder="resumes"):
                 continue
 
             chunks = chunk_text(text)
-
+            chunks.meta = {"source": file}
             for chunk in chunks:
 
                 chunk = chunk.strip()
